@@ -1,0 +1,64 @@
+{
+  "random": {
+    "type": "random",
+    "description": "随机压力分布",
+    "parameters": {
+      "distribution": "exponential",
+      "scale": 100,
+      "intensity": 0.5
+    }
+  },
+  "circle": {
+    "type": "circle",
+    "description": "圆形压力模式",
+    "parameters": {
+      "radius": 8,
+      "intensity": 3000,
+      "falloff": "gaussian",
+      "center": [16, 16]
+    }
+  },
+  "line": {
+    "type": "line",
+    "description": "线性压力模式",
+    "parameters": {
+      "width": 3,
+      "intensity": 2500,
+      "direction": "horizontal",
+      "position": 16
+    }
+  },
+  "wave": {
+    "type": "wave",
+    "description": "波浪压力模式",
+    "parameters": {
+      "amplitude": 2000,
+      "frequency": 0.2,
+      "direction": "horizontal",
+      "speed": 1.0
+    }
+  },
+  "footprint": {
+    "type": "custom",
+    "description": "足迹压力模式",
+    "parameters": {
+      "intensity": 4000,
+      "shape": "ellipse",
+      "width": 12,
+      "height": 20,
+      "center": [16, 16]
+    }
+  },
+  "multi_point": {
+    "type": "multi_point",
+    "description": "多点压力模式",
+    "parameters": {
+      "points": [
+        {"center": [10, 10], "radius": 4, "intensity": 3000},
+        {"center": [22, 22], "radius": 6, "intensity": 2500},
+        {"center": [10, 22], "radius": 3, "intensity": 3500}
+      ],
+      "falloff": "linear"
+    }
+  }
+} 

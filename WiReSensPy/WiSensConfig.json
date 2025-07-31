@@ -1,0 +1,57 @@
+{
+  "wifiOptions": {
+    "tcp_ip": "128.31.36.31", //ip address of the receiving device
+    "port": 7000, //port to listen on,
+    "numNodes": 256, //Number of sensor nodes to expect in a received wifi packet
+    "ssid": "StataCenter", //Name of the network
+    "password": "", //password for the network
+    "delay": 0 //delay between succesive packets in milliseconds
+  },
+
+  "serialOptions": {
+    "port": "COM7", //Serial Port to listen on
+    "baudrate": 921600, //Default bit rate,
+    "numNodes": 256, //Number of sensor readings to expect in a received serial line
+    "delay": 0 //delay between successive packets in milliseconds
+  },
+
+  "bleOptions": {
+    "numNodes": 256, //Number of sensor readings to expect in the BLE characteristic notification
+    "delay": 0 //delay between successive packets in milliseconds
+  },
+
+  "espOptions": {
+    "macAddress": [160, 163, 179, 144, 124, 188], //Mac Address of ESP32 receiver device
+    "numNodes": 256, //Number of sensor readings to expect over ESP-NOW
+    "delay": 0 //delay between successive packets in milliseconds
+  },
+
+  "vizOptions": {
+    "pitch": 3, //Starting pitch in pixels
+    "localIp": "1.1.1.1" //Local Ip address for mobile visualization
+  },
+
+  "readoutOptions": {
+    "groundPins": [26, 25, 4, 21, 12], //digital pins controlling ground wire selection
+    "readPins": [27, 33, 15, 32, 14], //digital pins controlling read wire selection
+    "adcPin": 34, //digital pins of the analog to digital converter
+    "resistance": 31000 //digital potentiometer resistance
+  },
+
+  "sensors": [
+    {
+      "id": 1,
+      "protocol": "wifi", //wifi, ble, or serial
+      "deviceName": "Esp1", //Necessary for BLE receivers only
+      "startCoord": [0, 0], //start node of readout, in [readWire,groundWire]
+      "endCoord": [31, 31], //end node of readout, in [readWire, groundWire]
+      "intermittent": {
+        "enabled": false, // True if intermittent sending is being used
+        "predict": true, // True if we should attempt to predict the values of missing packets
+        "p": 15, //Proportional control of intermittent send algorithm,
+        "d": 81 //Error threshold for intermittent sending
+      },
+      "outlineImage": "rightHand.png" //Background image to use in visualization of pressure data for this sensor
+    }
+  ]
+}

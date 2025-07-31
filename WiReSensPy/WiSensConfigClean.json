@@ -1,0 +1,51 @@
+{
+  "wifiOptions": {
+    "tcp_ip": "127.0.0.1",
+    "port": 7000,
+    "numNodes": 256,
+    "ssid": "StataCenter",
+    "password": ""
+  },
+
+  "readoutOptions": {
+    "groundPins": [26, 25, 4, 21, 12],
+    "readPins": [27, 33, 15, 32, 14],
+    "adcPin": 34,
+    "resistance": 31000
+  },
+
+  "sensors": [
+    {
+      "id": 1,
+      "protocol": "wifi",
+      "deviceName": "Esp1",
+      "startCoord": [0, 0],
+      "endCoord": [31, 31],
+      "intermittent": {
+        "enabled": false,
+        "predict": true,
+        "p": 21,
+        "d": 46
+      }
+    }
+  ],
+
+  "serialOptions": {
+    "port": "COM7",
+    "baudrate": 250000,
+    "numNodes": 256
+  },
+
+  "bleOptions": {
+    "numNodes": 256
+  },
+
+  "espOptions": {
+    "macAddress": [160, 163, 179, 144, 124, 188]
+  },
+
+  "vizOptions": {
+    "pitch": 3,
+    "localIp": ""
+  }
+}

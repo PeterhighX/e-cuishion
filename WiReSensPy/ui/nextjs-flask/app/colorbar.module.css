@@ -1,0 +1,27 @@
+.colorBarContainer {
+  width: 30%;
+  height: 45px;
+  position: relative;
+  left: 35%;
+}
+
+.gradient {
+  width: 100%;
+  height: 15px;
+}
+
+.tickContainer {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .colorBarContainer {
+    width: 80%; /* Take up the full width on smaller screens */
+    left: 10%;
+  }
+}

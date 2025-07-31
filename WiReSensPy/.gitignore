@@ -1,0 +1,8 @@
+recordings/
+__pycache__
+exp1data/
+analyzeApplications.ipynb
+analyzeIntermittent.ipynb
+reportCommStats.ipynb
+flaskApp/soundModule.py 
+flaskApp/stepCount.py
